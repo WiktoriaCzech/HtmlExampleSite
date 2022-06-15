@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl" >
+    <head>
+        <meta charset="utf-8">
+        <title>Cute Capybaras</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="images/capiStample.png" class="logo" alt="">
+                <h1>Cute Capybaras</h1>
+                <nav>
+                    <ul>
+                        <li><a href = "#">Home</a></li>
+                        <li><a href = "#">About</a></li>
+                        <li><a href = "#">Gallery</a></li>
+                        <li><a href = "#">Store</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.png" class = "cart" alt = "shopping cart">
+            </div>
+            <div class = "banner">
+                <div class = "left-col">
+                    <div class = "content">
+                        <br>
+                        <h1>They are cute.<br>
+                        They are unique.<br></h1>
+                        <p>Your daily dose of happiness with an orange on the head..</p>
+                    </div>
+                </div>
+                <div class = "right-col"> <!--slider-->
+                    <div class = "slider">
+                        <div class = "slides">
+                            <input type = "radio" name ="radio" id = "button1">
+                            <input type = "radio" name ="radio" id = "button2">
+                            <input type = "radio" name ="radio" id = "button3">
+                            <div class = "first slide">
+                                <img src="images/CapiHead.png" class="main-image" alt ="">
+                            </div>
+                            <div class = "second slide">
+                                <img src="images/SleepyCapi.jpg" class="main-image" alt ="">
+                            </div>
+                            <div class = "third slide">
+                                <img src="images/CapiOrange.png" class="main-image" alt ="">
+                            </div>
+                            <div class = "auto-nav">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                          </div>
+                        </div>
+                        <!--navigation start-->
+                        <div class = "navigation-manual">
+                            <label for = "button1" class="manual-btn"></label>
+                            <label for = "button2" class="manual-btn"></label>
+                            <label for = "button3" class="manual-btn"></label>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        var counter = 1;
+                        setInterval(function (){
+                            document.getElementById('button' + counter).checked = true;
+                            counter++;
+                            if(counter>3){
+                                counter=1;
+                            }
+                        },5000);
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
